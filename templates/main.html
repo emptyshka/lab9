@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}
+    Finished games list page
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1>Finished games list page</h1>
+    {% for el in articles %}
+    <div class="alert alert-info">
+        <p>Name: {{ el.firstName }}</p>
+        <h2>Hours taked to complite game: {{el.hours }} h</h2>
+        <p><b>Date: {{ el.date }}</b></p>
+    </div>  
+    {% endfor %}
+    <a href="/del_all" class="btn btn-danger">Delete all</a>
+</div>
+
+{% endblock %}
